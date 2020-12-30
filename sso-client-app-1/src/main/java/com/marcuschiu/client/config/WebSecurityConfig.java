@@ -26,7 +26,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // solution for web apps and RESTful web services, we do not need to
                 // add any further configuration for SSO
 				.oauth2Login();
-
 	}
 
     @Bean
