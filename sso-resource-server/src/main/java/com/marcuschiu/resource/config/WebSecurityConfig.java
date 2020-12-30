@@ -19,5 +19,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .anyRequest().authenticated()
             .and()
                 .oauth2ResourceServer().jwt();
+//                .oauth2ResourceServer(oauth2 -> oauth2.jwt());
+
+        // Anyone with an access token having the read scope can get Foos.
+        // In order to POST a new Foo, their token should have a write scope
     }
 }
