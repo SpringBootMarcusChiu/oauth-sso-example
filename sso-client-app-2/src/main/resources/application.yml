@@ -2,6 +2,13 @@ spring:
   security:
     oauth2:
       client:
+        # spring.security.oauth2.client.registration is the root namespace for registering a client
+        # We defined a client with registration id `custom`, which we then defined its:
+        # - client-id
+        # - client-secret
+        # - scope
+        # - authorization-grant-type
+        # - redirect-uri
         registration:
           custom:
             client-id: ssoClient-2
@@ -9,6 +16,9 @@ spring:
             scope: read,write
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8084/ui-two/login/oauth2/code/custom
+        # spring.security.oauth2.client.provider is where we define Authorization Servers
+        # We defined a provider/auth-server with id `custom`, which we then define the URIs
+        # the framework does the entire logging-in process, including redirection to Keycloak, seamlessly for us
         provider:
           custom:
             authorization-uri: http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/auth

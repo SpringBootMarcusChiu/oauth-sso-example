@@ -1,4 +1,4 @@
-package com.marcuschiu.client.web.controller;
+package com.marcuschiu.client.controller;
 
 import java.util.List;
 
@@ -10,26 +10,24 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.marcuschiu.client.web.model.FooModel;
-
 @Controller
 public class FooClientController {
 
     @Value("${resourceserver.api.url}")
-    private String fooApiUrl;
+    String fooApiUrl;
 
     @Autowired
-    private WebClient webClient;
+    WebClient webClient;
 
     @GetMapping("/foos")
     public String getFoos(Model model) {
-        List<FooModel> foos = this.webClient.get()
+        List<String> foos = this.webClient.get()
             .uri(fooApiUrl)
             .retrieve()
-            .bodyToMono(new ParameterizedTypeReference<List<FooModel>>() {
-            })
+            .bodyToMono(new ParameterizedTypeReference<List<String>>() {})
             .block();
         model.addAttribute("foos", foos);
         return "foos";
     }
+
 }

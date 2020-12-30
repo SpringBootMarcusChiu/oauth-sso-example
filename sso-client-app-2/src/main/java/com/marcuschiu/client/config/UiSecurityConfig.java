@@ -1,4 +1,4 @@
-package com.marcuschiu.client.spring;
+package com.marcuschiu.client.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,15 +13,18 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class UiSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {// @formatter:off
-		http.authorizeRequests().antMatchers("/", "/login**").permitAll().anyRequest().authenticated().and()
-				.oauth2Login();
-
-	}// @formatter:on
+    protected void configure(HttpSecurity http) throws Exception {
+		http
+                .authorizeRequests()
+                    .antMatchers("/").permitAll()
+                    .anyRequest().authenticated()
+            .and()
+                .oauth2Login();
+	}
 
     @Bean
-    WebClient webClient(ClientRegistrationRepository clientRegistrationRepository, OAuth2AuthorizedClientRepository authorizedClientRepository) {
-        ServletOAuth2AuthorizedClientExchangeFilterFunction oauth2 = new ServletOAuth2AuthorizedClientExchangeFilterFunction(clientRegistrationRepository, authorizedClientRepository);
+    WebClient webClient(ClientRegistrationRepository crr, OAuth2AuthorizedClientRepository acr) {
+        ServletOAuth2AuthorizedClientExchangeFilterFunction oauth2 = new ServletOAuth2AuthorizedClientExchangeFilterFunction(crr, acr);
         oauth2.setDefaultOAuth2AuthorizedClient(true);
         return WebClient.builder()
             .apply(oauth2.oauth2Configuration())

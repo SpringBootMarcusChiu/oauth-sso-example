@@ -3,7 +3,7 @@ package com.marcuschiu.resource.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping(value = "/api/foos")
 public class FooController {
 
-    List<String> foos = new ArrayList<>();
+    List<String> foos = Arrays.asList("Marcus Chiu", "Erina Chiu", "Anna Chiu", "Eric Chiu");
 
     @CrossOrigin(origins = "http://localhost:8089")
     @GetMapping(value = "/{id}")
