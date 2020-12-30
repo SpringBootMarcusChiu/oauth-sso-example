@@ -10,11 +10,13 @@ spring:
         # - authorization-grant-type
         # - redirect-uri
         registration:
+          # registration-id = custom
           custom:
             client-id: ssoClient-1
             client-secret: ssoClientSecret-1
             scope: read,write
             authorization-grant-type: authorization_code
+            # By default, Spring Boot configures this redirect URI as /login/oauth2/code/{registrationId}
             redirect-uri: http://localhost:8082/login/oauth2/code/custom
         # spring.security.oauth2.client.provider is where we define Authorization Servers
         # We defined a provider/auth-server with id `custom`, which we then define the URIs
