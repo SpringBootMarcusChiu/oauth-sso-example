@@ -1,15 +1,14 @@
 package com.marcuschiu.auth.config;
 
-import java.io.UnsupportedEncodingException;
+import org.keycloak.common.ClientConnection;
+import org.keycloak.services.filters.AbstractRequestFilter;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-
-import org.keycloak.common.ClientConnection;
-import org.keycloak.services.filters.AbstractRequestFilter;
+import java.io.UnsupportedEncodingException;
 
 public class EmbeddedKeycloakRequestFilter extends AbstractRequestFilter implements Filter {
 

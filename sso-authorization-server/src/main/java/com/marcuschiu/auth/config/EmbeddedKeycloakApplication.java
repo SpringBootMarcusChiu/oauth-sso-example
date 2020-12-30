@@ -1,7 +1,6 @@
 package com.marcuschiu.auth.config;
 
-import java.util.NoSuchElementException;
-
+import com.marcuschiu.auth.config.KeycloakServerProperties.AdminUser;
 import org.keycloak.Config;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.representations.idm.RealmRepresentation;
@@ -15,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-import com.marcuschiu.auth.config.KeycloakServerProperties.AdminUser;
+import java.util.NoSuchElementException;
 
 public class EmbeddedKeycloakApplication extends KeycloakApplication {
 

@@ -1,17 +1,17 @@
 package com.marcuschiu.resource;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import org.junit.Test;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
+//import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertNotNull;
+//
+//import java.util.HashMap;
+//import java.util.Map;
+//
+//import org.junit.Test;
+//import org.springframework.http.HttpHeaders;
+//import org.springframework.http.HttpStatus;
+//
+//import io.restassured.RestAssured;
+//import io.restassured.response.Response;
 
 //Before running this live test make sure both authorization server and resource server in this module are running   
 
