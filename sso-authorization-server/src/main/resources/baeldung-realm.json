@@ -432,7 +432,7 @@
     "enabled" : true,
     "clientAuthenticatorType" : "client-secret",
     "secret" : "ssoClientSecret-1",
-    "redirectUris" : [ "http://localhost:8082/ui-one/login/oauth2/code/custom"],
+    "redirectUris" : [ "http://localhost:8082/login/oauth2/code/custom"],
     "webOrigins" : [ "+" ],
     "notBefore" : 0,
     "bearerOnly" : false,
@@ -472,7 +472,7 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "ssoClientSecret-2",
       "redirectUris": [
-        "http://localhost:8084/ui-two/login/oauth2/code/custom"
+        "http://localhost:8084/login/oauth2/code/custom"
       ],
       "webOrigins": [
         "+"

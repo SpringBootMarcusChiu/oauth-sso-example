@@ -15,7 +15,7 @@ spring:
             client-secret: ssoClientSecret-1
             scope: read,write
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8082/ui-one/login/oauth2/code/custom
+            redirect-uri: http://localhost:8082/login/oauth2/code/custom
         # spring.security.oauth2.client.provider is where we define Authorization Servers
         # We defined a provider/auth-server with id `custom`, which we then define the URIs
         # the framework does the entire logging-in process, including redirection to Keycloak, seamlessly for us
@@ -32,8 +32,6 @@ spring:
     
 server: 
   port: 8082
-  servlet: 
-    context-path: /ui-one
     
 logging: 
   level: 
