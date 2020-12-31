@@ -17,4 +17,4 @@ spring:
           # - If we need to start it independently, then we can supply the jwk-set-uri property
           #   instead to point to the authorization server's endpoint exposing public keys
           # - That's all we need to get our server to validate JWT tokens
-#          jwk-set-uri: http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/certs
+          jwk-set-uri: http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/certs
