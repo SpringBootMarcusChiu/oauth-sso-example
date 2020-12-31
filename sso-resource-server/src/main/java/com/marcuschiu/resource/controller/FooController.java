@@ -13,7 +13,12 @@ public class FooController {
 
     List<String> foos = Arrays.asList("Marcus Chiu", "Erina Chiu", "Anna Chiu", "Eric Chiu");
 
-    @CrossOrigin(origins = "http://localhost:8089")
+    /**
+     * @CrossOrigin(origins = "http://localhost:8084") - for Angular Client
+     * @param id
+     * @return
+     */
+    @CrossOrigin(origins = "http://localhost:8084")
     @GetMapping(value = "/{id}")
     public String findOne(@PathVariable Integer id) {
         return foos.get(id);

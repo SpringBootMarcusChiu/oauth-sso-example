@@ -14,6 +14,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors()
             .and()
                 .authorizeRequests()
+//                    .anyRequest().permitAll()
                     .antMatchers(HttpMethod.GET, "/user/info", "/api/foos/**").hasAuthority("SCOPE_read")
                     .antMatchers(HttpMethod.POST, "/api/foos").hasAuthority("SCOPE_write")
                     .anyRequest().authenticated()
