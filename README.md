@@ -22,8 +22,13 @@
    1. john@test.com / 123
    2. mike@other.com / pass
     
-### Relevant Articles:
-- [Simple Single Sign-On with Spring Security OAuth2](http://confluence.marcuschiu.com/x/oQVDAQ)
+### Main Articles:
+1. [Simple Single Sign-On with Spring Security OAuth2](http://confluence.marcuschiu.com/x/oQVDAQ)
+2. [OAuth2 (Auth Server + Resource Server + Angular Client)](https://www.baeldung.com/rest-api-spring-oauth2-angular)
+
+### Other Articles:
+- [OAuth2 for a Spring REST API – Handle the Refresh Token in Angular](https://www.baeldung.com/spring-security-oauth2-refresh-token-angular)
+- [Logout in an OAuth Secured Application](http://www.baeldung.com/logout-spring-security-oauth)
 - [Using JWT with Spring Security OAuth](https://www.baeldung.com/spring-security-oauth-jwt)
 - [Customizing Themes for Keycloak](https://www.baeldung.com/spring-keycloak-custom-themes)
 - [Customizing the Login Page for Keycloak](https://www.baeldung.com/keycloak-custom-login-page)
