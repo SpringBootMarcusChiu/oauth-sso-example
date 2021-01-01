@@ -18,3 +18,12 @@ spring:
           #   instead to point to the authorization server's endpoint exposing public keys
           # - That's all we need to get our server to validate JWT tokens
           jwk-set-uri: http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/certs
+          # - JWTs include all the information within the Token. So the Resource Server needs to
+          #   verify the Token’s signature to make sure the data has not been modified.
+          # - The jwk-set-uri property contains the public key that the server can use for this purpose.
+          # - The issuer-uri property points to the base Authorization Server URI, which can also
+          #   be used to verify the iss claim, as an added security measure.
+          # - if the jwk-set-uri property is not set, the Resource Server will attempt to use the
+          #   issuer-ui to determine the location of this key, from the Authorization Server metadata endpoint.
+          # - Importantly, adding the issuer-uri property mandates that we should have the Authorization
+          #   Server running before we can start the Resource Server application

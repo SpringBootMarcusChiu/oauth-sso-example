@@ -14,5 +14,5 @@
 5. `resource-server-opaque` is a Spring Boot Resource Server which exchanges Opaque OAuth Tokens with the above authorization-server and dishes out /bars/**
     
 ### Relevant Articles:
-
-- [OAuth 2.0 Resource Server With Spring Security 5](https://www.baeldung.com/spring-security-oauth-resource-server)
+- https://www.baeldung.com/spring-security-oauth-jwt#custom-attr
+- https://www.baeldung.com/spring-security-oauth-resource-server

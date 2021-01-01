@@ -10,6 +10,11 @@ public class OrganizationSubClaimAdapter implements Converter<Map<String, Object
 
 	private final MappedJwtClaimSetConverter delegate = MappedJwtClaimSetConverter.withDefaults(Collections.emptyMap());
 
+	/**
+	 * see: https://www.baeldung.com/spring-security-oauth-jwt#rs-config
+	 * @param claims
+	 * @return
+	 */
 	public Map<String, Object> convert(Map<String, Object> claims) {
 		Map<String, Object> convertedClaims = this.delegate.convert(claims);
 

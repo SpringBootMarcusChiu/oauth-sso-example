@@ -58,6 +58,7 @@ export class AppService {
     window.location.reload();
   }
 
+  // https://www.baeldung.com/spring-security-oauth-jwt#js-client
   getOrganization() {
     	var token = Cookie.get("access_token");
     	var payload = this.jwtHelper.decodeToken(token);
