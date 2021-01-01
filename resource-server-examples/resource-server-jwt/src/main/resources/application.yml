@@ -1,0 +1,20 @@
+server: 
+  port: 8081
+  servlet: 
+    context-path: /resource-server-jwt
+
+####### resource server configuration properties
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # - The resource server uses this information to validate the JWT tokens coming in
+          #   from the client applications (e.g. sso-client-app-1 and sso-client-app-2)
+          # - For this validation to work using the issuer-uri property, the authorization
+          #   server must be up and running. Otherwise, the resource server wouldn't start
+          issuer-uri: http://localhost:8083/auth/realms/baeldung
+          # - If we need to start it independently, then we can supply the jwk-set-uri property
+          #   instead to point to the authorization server's endpoint exposing public keys
+          # - That's all we need to get our server to validate JWT tokens
+#          jwk-set-uri: http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/certs
