@@ -22,6 +22,10 @@
 5. There are two users registered in the Authorization Server:
    1. john@test.com / 123
    2. mike@other.com / pass
+   
+   
+### Confluence Article
+- http://confluence.marcuschiu.com/x/oQVDAQ
     
 ### Main Articles:
 1. [Simple Single Sign-On with Spring Security OAuth2](http://confluence.marcuschiu.com/x/oQVDAQ)
