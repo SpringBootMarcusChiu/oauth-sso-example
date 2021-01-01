@@ -38,6 +38,9 @@ public class OAuth2LoginSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .oauth2Login(ol -> ol.userInfoEndpoint().oidcUserService(googleUserService()))
                 .oauth2Login(oauthLogin -> oauthLogin.permitAll())
 
+                // MORE CUSTOM .oauth2Login()
+                // see: https://www.baeldung.com/spring-security-5-oauth2-login
+
                 // Logout
                 .logout(logout -> logout.logoutSuccessHandler(oidcLogoutSuccessHandler()));
     }
