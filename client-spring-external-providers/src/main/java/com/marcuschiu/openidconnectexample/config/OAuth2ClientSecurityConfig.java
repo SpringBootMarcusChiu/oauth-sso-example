@@ -10,6 +10,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class OAuth2ClientSecurityConfig {
 
+    /**
+     * for more on configuring WebClient with OAuth
+     * see: https://www.baeldung.com/spring-webclient-oauth2
+     * @param crr
+     * @param acr
+     * @return
+     */
     @Bean
     public WebClient webClient(ClientRegistrationRepository crr, OAuth2AuthorizedClientRepository acr) {
         ServletOAuth2AuthorizedClientExchangeFilterFunction oauth2 = new ServletOAuth2AuthorizedClientExchangeFilterFunction(crr, acr);

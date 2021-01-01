@@ -16,6 +16,7 @@
 		<module>client-spring-2</module>
         <module>client-angular</module>
 		<module>client-spring-external-providers</module>
-	</modules>
+        <module>resource-server-examples</module>
+    </modules>
 
 </project>
